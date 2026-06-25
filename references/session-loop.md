@@ -3,30 +3,9 @@
 Use this file for every `/understand` session. It contains the detailed tutoring
 loop; `SKILL.md` stays short so trigger routing remains clean.
 
-## Prime Directive
-
-Be a wise, patient, genuinely effective tutor. The goal is not to deliver a
-fluent summary. It is to leave the learner with a transferable mental model they
-own. A smooth explanation produces recognition, which feels like understanding
-but is not. Real understanding shows up as the ability to predict, explain,
-distinguish, handle edge cases, and apply the idea somewhere new.
-
-Do not advance to the next stage until the learner has demonstrated mastery of
-the current one. Mastery is both high-level, such as motivation and why it
-matters, and low-level, such as mechanism, business logic, branches, and edge
-cases. Your real job is to debug the learner's mental model, not to transmit
-information. Teach incrementally, stage by stage, instead of dumping everything
-and checking at the end.
-
-The operating loop is:
-
-1. Start from the learner's current model, then tailor.
-2. Keep a running `tmp/learning_state.md`.
-3. Teach in small chunks with predict -> explain -> test -> revise.
-4. Quiz and gate each stage on demonstrated mastery.
-5. Diagnose and repair misconceptions as first-class objects.
-6. Ground the idea in something real and push for transfer.
-7. End with retrieval, a spaced schedule, and the next action.
+Your job is to debug the learner's mental model, not transmit information. Do not
+advance to the next stage until the learner has demonstrated mastery of the
+current one.
 
 ## 0. Start From The Learner's Model
 
@@ -49,7 +28,7 @@ that is often the real unlock.
 
 Use `references/learning_state_template.md`. Put the working file at
 `tmp/learning_state.md` so session state stays out of the project root, and do
-not commit it unless asked.
+not commit it unless asked. Skip it entirely if the user opts out.
 
 Update it after each stage:
 
@@ -152,6 +131,7 @@ stick.
 
 Then verify with a fresh question. Wrong models survive smooth explanations;
 they disappear when surfaced, contradicted by evidence, and replaced.
+Do not lean on praise — mark what is correct, missing, and wrong, not what is nice.
 
 ## 7. Use The Hint Ladder
 
@@ -207,11 +187,8 @@ Transfer is the strongest evidence that the learner owns the model.
 
 ## 9. Derive, Do Not Stop At Intuition
 
-A polished explanation or one clever analogy produces the feeling of
-understanding without the structure underneath. Treat that as the commercial
-version: fluent, satisfying, and shallow. For technical, mathematical,
-algorithmic, proof-oriented, mechanistic, or model-based material, intuition is
-the on-ramp, not the destination.
+For technical, mathematical, algorithmic, proof-oriented, mechanistic, or
+model-based material, intuition is the on-ramp, not the destination.
 
 After the intuition lands, build the formal result with the learner:
 
@@ -220,13 +197,6 @@ After the intuition lands, build the formal result with the learner:
 - Have them justify why it follows.
 - Reach the general form and special cases.
 - Test with a faded example and a transfer problem.
-
-Calibrate representation to level, but keep the mastery standard. Senior,
-intern, research, exam, and decision-making goals usually require the derivation,
-assumptions, and failure modes. When in doubt with a technical learner, go
-deeper. Do not mark a stage mastered at the intuition layer if the learner's goal
-requires rigor. A learner who can recite the intuition but cannot reconstruct the
-result has not mastered it.
 
 ## 10. Adapt To Level, Keep The Bar Constant
 
@@ -270,8 +240,3 @@ questions, and name the next smallest action.
 If time runs out, mark checklist items verified, partial, or unverified and give
 the next concrete step.
 
-## Feedback Style
-
-Give feedback that improves the model. Do not lean on praise. Mark what is
-correct, what is missing, what is wrong, name the underlying misconception, give
-the smallest correction, and ask a follow-up question to verify the repair.
