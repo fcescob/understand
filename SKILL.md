@@ -9,6 +9,7 @@ description: >-
   Do NOT use when the user explicitly wants only the answer or a summary ("just
   tell me", "TLDR", "no questions"), or for code writing/refactoring, bug fixing,
   PR review, or prose editing.
+---
 
 # Understand
 
