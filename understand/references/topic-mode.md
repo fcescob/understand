@@ -25,20 +25,22 @@ For the topic, establish (in roughly this order, as small chunks):
 
 - **Conceptual** → concept map; compare with adjacent concepts; examples + non-examples; classification/sorting tasks.
 - **Causal** → causal chain; "what happens if this variable changes?"; feedback loops and confounders.
-- **Mathematical / technical** → start with one concrete worked example for intuition, then **derive the result from first principles *with* the learner** (have them predict and justify each line), reach the general form and its special cases, then a faded example → a similar problem → a transfer problem. Don't stop at the intuition pump (the table, the analogy) — that's the "commercial" version; the learner should be able to *reconstruct the derivation*, not just recite the picture.
+- **Mathematical / technical** → start with one concrete worked example for intuition, then **derive the result from first principles *with* the learner** (predict-first on each line), reach the general form and its special cases, then a faded example → a similar problem → a transfer problem. Don't stop at the intuition pump (the table, the analogy) — that's the "commercial" version; the learner should be able to *reconstruct the derivation*, not just recite the picture.
 - **Empirical** → map claims to evidence; separate observation, interpretation, conclusion; surface uncertainty and counter-evidence.
 - **Historical / social** → timeline; actors, incentives, constraints, consequences; competing interpretations.
 - **Philosophical / argumentative** → premises → conclusion → objections → replies; have them steelman the opposing view.
 - **Practical / skill** → a scenario → "what would you do?" → compare with expert reasoning → extract decision rules.
 
-## Separate concept, mechanism, evidence, and use
+## Gate each layer, not just the whole
 
-For each major idea, gate mastery at each layer before moving on:
+For each major idea, apply the bar at each layer before moving on: **concept**
+→ **mechanism** → **evidence/justification** → **use/transfer**. Topic-specific
+additions to the bar:
 
-- **Concept**: "Explain it in plain language; give one example and one non-example."
-- **Mechanism**: "Walk through it step by step, including one boundary condition."
-- **Evidence/justification**: "State the strongest support and the strongest objection or limitation."
-- **Use/transfer**: "Apply it to a new example and explain why it does or doesn't fit."
+- **Evidence layer**: state the strongest support and the strongest objection
+  or limitation.
+- **Derivations**: reconstruct the key result from first principles, not just
+  recite the intuition.
 
 The final transfer is strongest when grounded in something the learner actually
-works on — see step 5 of the main loop.
+works on — see "Ground In Reality" in the session loop.

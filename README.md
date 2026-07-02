@@ -11,8 +11,10 @@ It won't advance until the learner can predict, explain, derive when appropriate
 and transfer the idea. It elicits the learner's current model, teaches in small
 chunks with predict -> explain -> test -> revise, quizzes with misconceptions as
 distractors, repairs the mental model, grounds the idea in real code or data, and
-ends with from-memory retrieval plus a spaced schedule. It also knows when to
-stop: say "stop", "no tutoring", or "no more questions" and it will.
+ends with from-memory retrieval plus a spaced schedule. Sessions persist: state
+lives in `tmp/learning/<topic>.md`, and resuming a topic starts with the due
+retrieval questions before any new material. It also knows when to stop: say
+"stop", "no tutoring", or "no more questions" and it will.
 
 It works in two modes, often both in one session:
 
@@ -53,7 +55,8 @@ and it drops the gating.
 - `references/session-loop.md`: detailed tutoring loop.
 - `references/topic-mode.md`: topic/concept teaching mode.
 - `references/codebase-mode.md`: codebase/PR/bug comprehension mode.
-- `references/learning_state_template.md`: template for `tmp/learning_state.md`.
+- `references/learning_state_template.md`: template for the per-topic
+  `tmp/learning/<topic-slug>.md` state file.
 
 ## License
 

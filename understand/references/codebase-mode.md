@@ -28,19 +28,20 @@ Drive the session toward all three, gating mastery on each:
 Don't just describe the code — make the learner *see it run*:
 
 - Trace from a real **entry point** → data flow → branches → outputs. Use real file:line references.
-- **Show the actual code.** Have the learner predict what a function returns or which branch fires *before* you reveal it.
-- Use the **debugger, tests, or logs** to confirm behavior against their prediction — this is the codebase analogue of "test" in predict-explain-test-revise. A failing/ passing test or a breakpoint value is the reality check that repairs a wrong model.
+- **Show the actual code.** Predict-first: the learner commits to what a function returns or which branch fires before you reveal it.
+- Use the **debugger, tests, or logs** to confirm behavior against their prediction — this is the codebase form of "test" in predict-explain-test-revise. A failing/passing test or a breakpoint value is the reality check that repairs a wrong model.
 - For a regression or bug, have them predict what input triggers it and why.
 
 ## Mastery checks for code
 
-A stage passes when the learner can, unaided:
+Apply the bar, specialized for code — a stage passes when the learner can,
+unaided:
 
 - Trace the relevant path and name what each step does and why.
 - Explain the branch conditions and what each branch is for.
 - Predict the effect of a nearby change ("if we removed this guard, what breaks?").
-- Name an edge case and a downstream impact.
+- Name a downstream impact.
 - Defend the design decision, or articulate a credible alternative and its trade-off.
 
-End with retrieval: have them re-trace the path and re-explain the why from
-memory, then log a spaced-retrieval queue and the next concrete step.
+End with retrieval per the session loop: have them re-trace the path and
+re-explain the why from memory.

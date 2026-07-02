@@ -1,11 +1,15 @@
-# tmp/learning_state.md — template
+# Learning-state file — template
 
-Copy this structure into the working `tmp/learning_state.md` and update it after
-every stage. Keep it terse; it's a progress instrument, not prose. Delete rows
-that don't apply (e.g. the evidence map for a non-empirical topic).
+One file per topic at `tmp/learning/<topic-slug>.md`, so sessions on different
+topics don't collide. Copy this structure into the working file and update it
+after every gated stage. Keep it terse; it's a progress instrument, not prose.
+Delete rows that don't apply (e.g. the evidence map for a non-empirical topic).
+
+On resume, the Retrieval Queue and Mastery Log are read first — keep them
+accurate.
 
 ```markdown
-# tmp/learning_state.md — <Topic / codebase area>
+# <Topic / codebase area>
 
 ## Learner Profile
 - Level: ELI5 / ELI14 / ELII / expert
@@ -48,11 +52,11 @@ that don't apply (e.g. the evidence map for a non-empirical topic).
 |---|---|---|---|
 
 ## Retrieval Queue (spaced — answer from memory, no notes)
-| When | Question | Expected mastery |
-|---|---|---|
-| +1 day | ... | ... |
-| +3 days | ... | ... |
-| +7 days | Teach it back in 6 sentences | full arc |
+| Due date | Question | Expected mastery | Result |
+|---|---|---|---|
+| <today +1 day> | ... | ... | |
+| <today +3 days> | ... | ... | |
+| <today +7 days> | Teach it back in 6 sentences | full arc | |
 
 ## Next Actions
 - <smallest concrete next step>
