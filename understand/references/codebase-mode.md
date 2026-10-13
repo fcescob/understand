@@ -1,47 +1,32 @@
-# Codebase / PR / bug mode
+# Codebase mode
 
-Use when the object of understanding is a real system or change: a bug, a
-feature, a PR, a subsystem, an incident, an area someone is onboarding into. The
-truth test here is *operational* — can the learner trace the path, predict the
-branch, explain the invariant, and say what breaks?
+For a real system or change: a bug, feature, PR, subsystem, incident, or an area to onboard into. The test is operational: can the learner trace the path, predict the branch, explain the invariant, and say what breaks? Record the repo's absolute path in the state file so later sessions and reviews can reopen the code.
 
-## The three things they must understand
+## Roadmap
 
-Drive the session toward all three, gating mastery on each:
+For a change (a bug, feature, PR, or incident), one stage each, in order:
 
-1. **The problem & why it existed**
-   - What was wrong or missing? Why did it matter (users, correctness, latency, money, safety)?
-   - What was the old behavior? What were the branches / cases / failure paths?
-   - Drill into *why* repeatedly — surface the real root cause, not the surface symptom.
+1. **The problem**: what was wrong or missing, and why it mattered (users, correctness, latency, money, safety); the old behaviour, its branches and failure paths. Ask "why?" until you reach the root cause rather than the symptom.
+2. **The solution**: what the code does now, mechanism and business logic; why this design over the alternatives, under which constraints; the edge cases it handles and the ones it deliberately leaves.
+3. **The blast radius**: what depends on it downstream, what could regress, and what you would watch or test.
 
-2. **The solution & why it was done this way**
-   - What does the new code do, mechanism and business logic?
-   - Why this design over the alternatives? What were the trade-offs and constraints?
-   - What are the edge cases the solution handles (and any it deliberately doesn't)?
+For onboarding with no single change, the stages follow the main request path instead: entry point, core data flow, the branches that matter, and where it fails.
 
-3. **The broader context & blast radius**
-   - What does this change touch downstream? What relies on it?
-   - What could regress? What would you watch or test?
+## Make behaviour visible
 
-## How to make behavior visible
+The code is the ground truth, so the learner watches it run:
 
-Don't just describe the code — make the learner *see it run*:
+- Trace from a real entry point through data flow and branches to outputs, with file:line references, and draw the path as a sequence or flow diagram.
+- Predict-first on code: the learner says what a function returns or which branch fires before you show it.
+- Settle each prediction with a test, a log line, a debugger value, or a small reproduction.
+- For a bug or regression, the learner predicts the input that triggers it, and why.
 
-- Trace from a real **entry point** → data flow → branches → outputs. Use real file:line references.
-- **Show the actual code.** Predict-first: the learner commits to what a function returns or which branch fires before you reveal it.
-- Use the **debugger, tests, or logs** to confirm behavior against their prediction — this is the codebase form of "test" in predict-explain-test-revise. A failing/passing test or a breakpoint value is the reality check that repairs a wrong model.
-- For a regression or bug, have them predict what input triggers it and why.
+## Additions to the bar
 
-## Mastery checks for code
-
-Apply the bar, specialized for code — a stage passes when the learner can,
-unaided:
-
-- Trace the relevant path and name what each step does and why.
-- Explain the branch conditions and what each branch is for.
-- Predict the effect of a nearby change ("if we removed this guard, what breaks?").
+- Trace the path cold, saying what each step does and why.
+- State each branch condition and what the branch is for.
+- Predict the effect of a nearby change ("remove this guard: what breaks?").
 - Name a downstream impact.
-- Defend the design decision, or articulate a credible alternative and its trade-off.
+- Defend the design, or give a credible alternative and its trade-off.
 
-End with retrieval per the session loop: have them re-trace the path and
-re-explain the why from memory.
+The teach-back is a cold re-trace of the path, with the why at each step.

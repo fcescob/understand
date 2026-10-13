@@ -1,0 +1,5 @@
+interface:
+  display_name: "Understand"
+  short_description: "Learn a topic or codebase so it sticks"
+policy:
+  allow_implicit_invocation: false

@@ -1,63 +1,38 @@
-# Learning-state file — template
+# State file format
 
-One file per topic at `tmp/learning/<topic-slug>.md`, so sessions on different
-topics don't collide. Copy this structure into the working file and update it
-after every gated stage. Keep it terse; it's a progress instrument, not prose.
-Delete rows that don't apply (e.g. the evidence map for a non-empirical topic).
+One file per topic at `~/.understand/<topic-slug>.md`. Keep it terse: it is the instrument later sessions read. Reviews read the queue and the reference model; a resumed session reads the roadmap and the log.
 
-On resume, the Retrieval Queue and Mastery Log are read first — keep them
-accurate.
+````markdown
+# <Topic or code area>
 
-```markdown
-# <Topic / codebase area>
+- Mode: topic | codebase (repo: <absolute path>)
+- Goal: <what the learner wants to do with it>
+- Time: <per-session budget>
+- Placement: <what they showed they already know; where teaching started>
 
-## Learner Profile
-- Level: ELI5 / ELI14 / ELII / expert
-- Goal: intuition / apply / exam / research / teach / decide
-- Background: <relevant prerequisites they already have>
-- Time: <budget>
+## Roadmap
+- Stage 1: <one-line goal> (not started | learning | fresh | retained)
+- Stage 2: ...
 
-## Session Goal (the mastery checklist for THIS session)
-- [ ] Can state what it is and why it matters
-- [ ] Can explain the mechanism / business logic in own words
-- [ ] Can handle the key edge cases / branches
-- [ ] Can apply it to a new case + name a failure mode
-- [ ] (codebase) Understands the problem, why it existed, the old behavior, the fix, and the blast radius
+## Reference model
+<The compact correct model you grade against: mechanism, key examples, near misses, boundaries, sources. Codebase: the traced path with file:line.>
 
-## Roadmap (small, gated chunks)
-- [ ] Stage 0: elicit current mental model
-- [ ] Stage 1 (prereq): ...
-- [ ] Stage 2: ...
-- [ ] Stage N: transfer / failure modes
+## Misconceptions
+| Misconception | Evidence it was wrong | Repaired |
+|---|---|---|
 
-## Current Mental Model
-- Learner's current explanation:
-- Tutor's refinement:
-- Confidence: Low / Medium / High
-
-## Concept / Mechanism Map
-| Concept or Step | Depends on / Why it happens | Example | Non-example / boundary | Often confused with |
+## Log
+| Date | Item | Question | Result | Confidence |
 |---|---|---|---|---|
 
-## Misconceptions & Repairs
-| Misconception | Why it's tempting | Evidence it was wrong | Better model | Verified? |
-|---|---|---|---|---|
-
-## Evidence / Source Map (only if empirical / contested)
-| Claim | Source or evidence | Strength | Counter-evidence | Confidence |
-|---|---|---|---|---|
-
-## Mastery Log
-| Stage | Status (PASS/PARTIAL/FAIL) | Evidence (what they demonstrated) | Next action |
+## Review queue
+| Item | Rung (days) | Due | Last result |
 |---|---|---|---|
+| Stage 1: <idea> | 1 | <YYYY-MM-DD> | |
+| Teach-back | 1 | <YYYY-MM-DD> | |
 
-## Retrieval Queue (spaced — answer from memory, no notes)
-| Due date | Question | Expected mastery | Result |
-|---|---|---|---|
-| <today +1 day> | ... | ... | |
-| <today +3 days> | ... | ... | |
-| <today +7 days> | Teach it back in 6 sentences | full arc | |
+## Next step
+<smallest concrete next action>
+````
 
-## Next Actions
-- <smallest concrete next step>
-```
+Result is PASS, PARTIAL, or FAIL, with "lucky guess" or "confident error" added where it applies. Keep every log row: pass rates per rung are how anyone can tell whether the learning lasts.

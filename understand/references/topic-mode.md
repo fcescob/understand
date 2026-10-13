@@ -1,46 +1,38 @@
-# Topic / concept mode
+# Topic mode
 
-Use when the object of understanding is an idea, not a specific codebase: an
-algorithm, a theory, a paper, a mechanism, a domain, a debate. The goal is a
-structured, transferable model — not isolated facts.
+For an idea rather than a particular system: an algorithm, theorem, paper, mechanism, domain, or debate.
 
-## Build the topic map through questions
+## Roadmap
 
-For the topic, establish (in roughly this order, as small chunks):
+Build stages in roughly this order, skipping what placement showed the learner already has:
 
-1. **Core question** — what problem does this idea answer?
-2. **Motivation** — why does it matter; what decision or capability does it unlock?
-3. **Prerequisites** — what must be understood first? Check these before building on them.
-4. **Vocabulary** — key terms, and how they differ from everyday meaning.
-5. **Mechanism** — what causes what, or what implies what. The heart of the model.
-6. **Structure** — how the sub-ideas relate.
-7. **Canonical examples** — vivid cases that fit.
-8. **Non-examples** — things that look similar but are not the same.
-9. **Boundary conditions** — when the idea stops working.
-10. **Misconceptions** — what learners reliably get wrong.
-11. **Evidence** — how we know it's true / accepted (when empirical or contested).
-12. **Applications & transfer** — where it's used, and where else it could apply.
+1. **Core question**: what problem the idea answers, and what it unlocks.
+2. **Prerequisites and vocabulary**, including terms that mean something different in everyday use.
+3. **Mechanism**: what causes or implies what.
+4. **Structure**: how the sub-ideas relate.
+5. **Boundaries**: where the idea stops working, and the misconceptions learners reliably fall into.
+6. **Evidence**, for an empirical or contested idea: how we know, and how strongly.
+7. **Transfer**: where it applies, ending in something the learner actually works on.
 
-## Pick the representation that fits the topic
+## Representation
 
-- **Conceptual** → concept map; compare with adjacent concepts; examples + non-examples; classification/sorting tasks.
-- **Causal** → causal chain; "what happens if this variable changes?"; feedback loops and confounders.
-- **Mathematical / technical** → start with one concrete worked example for intuition, then **derive the result from first principles *with* the learner** (predict-first on each line), reach the general form and its special cases, then a faded example → a similar problem → a transfer problem. Don't stop at the intuition pump (the table, the analogy) — that's the "commercial" version; the learner should be able to *reconstruct the derivation*, not just recite the picture.
-- **Empirical** → map claims to evidence; separate observation, interpretation, conclusion; surface uncertainty and counter-evidence.
-- **Historical / social** → timeline; actors, incentives, constraints, consequences; competing interpretations.
-- **Philosophical / argumentative** → premises → conclusion → objections → replies; have them steelman the opposing view.
-- **Practical / skill** → a scenario → "what would you do?" → compare with expert reasoning → extract decision rules.
+Match the representation to the topic's shape:
 
-## Gate each layer, not just the whole
+| Shape | Representation |
+|---|---|
+| Conceptual | Concept map; comparison with adjacent concepts; sorting examples from near misses |
+| Causal | Causal chain; "what happens if this variable changes?"; feedback loops and confounders |
+| Mathematical or technical | A derivation (below) |
+| Empirical | Claims mapped to evidence; observation, interpretation, and conclusion kept apart; counter-evidence |
+| Historical or social | Timeline; actors, incentives, constraints, consequences; competing interpretations |
+| Argumentative | Premises, conclusion, objections, replies; the learner steelmans the other side |
+| Practical skill | A scenario, "what would you do?", comparison with expert reasoning, the decision rule it yields |
 
-For each major idea, apply the bar at each layer before moving on: **concept**
-→ **mechanism** → **evidence/justification** → **use/transfer**. Topic-specific
-additions to the bar:
+## Derivations
 
-- **Evidence layer**: state the strongest support and the strongest objection
-  or limitation.
-- **Derivations**: reconstruct the key result from first principles, not just
-  recite the intuition.
+Intuition is the on-ramp; the destination is a result the learner can rebuild. After one worked example for intuition, derive from the definitions with the learner predicting each next line and saying why it follows. Reach the general form and its special cases, then a faded example (they fill in the missing steps), then a transfer problem.
 
-The final transfer is strongest when grounded in something the learner actually
-works on — see "Ground In Reality" in the session loop.
+## Additions to the bar
+
+- **Derivation**: reconstruct the key result cold from the definitions.
+- **Evidence**: name the strongest support and the strongest objection.
